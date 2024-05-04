@@ -107,7 +107,7 @@ class Main(MDApp):
     def show_popup_help(self):
         pop_up(self,
         title="Greetings!",
-        text="What is this?\nThis is a TRIVIA APP!\nTest your knowledge to a random questions!!\nSubmitted to Sir Wilz for the Finals Project\nSource Code: \nContact Me: tabigne.johnanthony.mcc@gmail.com\nDakoa akong grado sir huhuhu\nCredits to: Open Trivia DB \nThe trivia questions are from them!\nhttps://opentdb.com/\nhttps://opentdb.com/api.php?amount=50&type=multiple"
+        text="What is this?\nThis is a TRIVIA APP!\nTest your knowledge to a random questions!!\nSubmitted to Sir Wilz for the Finals Project\nSource Code: https://github.com/frannytabigs/trivia_mobileapp_kivymd_python\nContact Me: tabigne.johnanthony.mcc@gmail.com\nDakoa akong grado sir huhuhu\nCredits to: Open Trivia DB \nThe trivia questions are from them!\nhttps://opentdb.com/\nhttps://opentdb.com/api.php?amount=50&type=multiple"
                )
 
 
