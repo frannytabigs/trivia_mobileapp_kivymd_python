@@ -1,0 +1,262 @@
+MDScreen:
+
+    md_bg_color:0/255,153/255,255/255,1
+
+    Image:
+        id: background_img
+        source: 'trivia.png'
+        allow_stretch: True
+        keep_ratio: False
+
+
+    MDBoxLayout:
+        orientation:'vertical'
+
+        MDBoxLayout:
+            size_hint_y:.25
+
+            padding:dp(25)
+
+            MDBoxLayout:
+                orientation:"vertical"
+
+                MDLabel:
+                    id: question
+                    text:"QUESTION"
+                    font_style:"H4"
+
+                MDBoxLayout:
+                    adaptive_size:True
+                    spacing:dp(10)
+                    MDLabel:
+
+                        text:" "
+                        text_size:None,None
+                        adaptive_width:True
+                    #MDIcon:
+                        #icon:'chevron-up'
+
+            MDIconButton:
+                icon:"question_mark.png"
+                on_press: app.show_popup_help()
+
+        MDGridLayout:
+            size_hint_y:1
+            cols:2
+            padding:[dp(15),dp(15),dp(15),dp(35)]
+            spacing:dp(10)
+
+
+            MDCard:
+
+                size_hint: (0.45,None)
+                on_press: app.card_pressed(self,'category')
+                md_bg_color:153/255,214/255,255/255,0.5
+                padding:dp(15)
+                spacing:dp(15)
+                radius:dp(25)
+                ripple_behavior: True
+                orientation:'vertical'
+
+                MDBoxLayout:
+                    orientation:'vertical'
+                MDLabel:
+                    id: category
+                    halign:"center"
+                    text:'CATEGORY'
+                    font_style:"H6"
+                MDLabel:
+                    id: difficulty
+                    halign:"center"
+                    font_style:"Caption"
+                    text:'Difficulty'
+                MDLabel:
+                    halign:"center"
+                    text:'Category & Difficulty'
+
+            MDCard:
+
+                size_hint: (0.45,None)
+                on_press: app.card_pressed(self,'score')
+                md_bg_color:153/255,214/255,255/255,0.5
+                padding:dp(15)
+                spacing:dp(15)
+                radius:dp(25)
+                ripple_behavior: True
+                orientation:'vertical'
+
+                MDBoxLayout:
+                    orientation:'vertical'
+                MDLabel:
+                    id: score
+                    halign:"center"
+                    text:'SCORE'
+                    font_style:"H6"
+                MDLabel:
+                    halign:"center"
+                    font_style:"Caption"
+                    text:'Your Score'
+                MDLabel:
+                    halign:"center"
+                    text:' '
+
+            MDCard:
+
+                size_hint: (0.45,None)
+                on_press: app.card_pressed(self,'choice1')
+                md_bg_color:153/255,214/255,255/255,0.5
+                padding:dp(15)
+                spacing:dp(15)
+                radius:dp(25)
+                ripple_behavior: True
+                orientation:'vertical'
+
+                MDBoxLayout:
+                    orientation:'vertical'
+                MDLabel:
+                    id: choice1
+                    halign:"center"
+                    text:'CHOICES'
+                    font_style:"H6"
+                MDLabel:
+                    halign:"center"
+                    font_style:"Caption"
+                    text:'choice 1'
+                MDLabel:
+                    halign:"center"
+                    text:' '
+
+            MDCard:
+
+                size_hint: (0.45,None)
+                on_press: app.card_pressed(self,'choice2')
+                md_bg_color:153/255,214/255,255/255,0.5
+                padding:dp(15)
+                spacing:dp(15)
+                radius:dp(25)
+                ripple_behavior: True
+                orientation:'vertical'
+
+                MDBoxLayout:
+                    orientation:'vertical'
+                MDLabel:
+                    id: choice2
+                    halign:"center"
+                    text:'CHOICES'
+                    font_style:"H6"
+                MDLabel:
+                    halign:"center"
+                    font_style:"Caption"
+                    text:'choice 2'
+                MDLabel:
+                    halign:"center"
+                    text:' '
+
+
+            MDCard:
+
+                size_hint: (0.45,None)
+                on_press: app.card_pressed(self,'choice3')
+                md_bg_color:153/255,214/255,255/255,0.5
+                padding:dp(15)
+                spacing:dp(15)
+                radius:dp(25)
+                ripple_behavior: True
+                orientation:'vertical'
+
+                MDBoxLayout:
+                    orientation:'vertical'
+                MDLabel:
+                    id: choice3
+                    halign:"center"
+                    text:'CHOICES'
+                    font_style:"H6"
+                MDLabel:
+                    halign:"center"
+                    font_style:"Caption"
+                    text:'choice 3'
+                MDLabel:
+                    halign:"center"
+                    text:' '
+
+            MDCard:
+
+                size_hint: (0.45,None)
+                on_press: app.card_pressed(self,'choice4')
+                md_bg_color:153/255,214/255,255/255,0.5
+                padding:dp(15)
+                spacing:dp(15)
+                radius:dp(25)
+                ripple_behavior: True
+                orientation:'vertical'
+
+                MDBoxLayout:
+                    orientation:'vertical'
+                MDLabel:
+                    id: choice4
+                    halign:"center"
+                    text:'CHOICES'
+                    font_style:"H6"
+                MDLabel:
+                    halign:"center"
+                    font_style:"Caption"
+                    text:'choice 4'
+                MDLabel:
+                    halign:"center"
+                    text:' '
+
+
+            MDCard:
+
+                size_hint: (0.45,None)
+                on_press: app.card_pressed(self,'new_question')
+                md_bg_color:153/255,214/255,255/255,0.5
+                padding:dp(15)
+                spacing:dp(15)
+                radius:dp(25)
+                ripple_behavior: True
+                orientation:'vertical'
+
+                MDBoxLayout:
+                    orientation:'vertical'
+                MDLabel:
+
+                    halign:"center"
+                    text:'NEW QUESTION'
+                    font_style:"H6"
+                MDLabel:
+                    id: total_questions
+                    halign:"center"
+                    font_style:"Caption"
+                    text:'Total Questions'
+                MDLabel:
+                    halign:"center"
+                    text:' '
+
+
+            MDCard:
+
+                size_hint: (0.45,None)
+                on_press: app.card_pressed(self,'reset_score')
+                md_bg_color:153/255,214/255,255/255,0.5
+                padding:dp(15)
+                spacing:dp(15)
+                radius:dp(25)
+                ripple_behavior: True
+                orientation:'vertical'
+
+                MDBoxLayout:
+                    orientation:'vertical'
+                MDLabel:
+                    id: resetscore
+                    halign:"center"
+                    text:'RESET SCORE'
+                    font_style:"H6"
+                MDLabel:
+                    halign:"center"
+                    font_style:"Caption"
+                    text:' '
+                MDLabel:
+                    halign:"center"
+                    text:' '
+
